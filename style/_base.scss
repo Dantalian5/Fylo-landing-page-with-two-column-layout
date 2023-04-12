@@ -1,15 +1,30 @@
 //@ Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@400;700&display=swap');
+//Fonts:
+ $ff-open-sans: 'Open Sans', sans-serif;
+ $ff-raleway: 'Raleway', sans-serif;
 // Colors:
     // Primary
+    $c-p-Very-Dark-Blue: hsl(243, 87%, 12%);
+    $c-p-Desaturated-Blue: hsl(238, 22%, 44%);
+    //Accent
+    $c-a-Bright-Blue: hsl(224, 93%, 58%);
+    $c-a-Moderate-Cyan: hsl(170, 45%, 43%);
     // Neutral
+    $c-n-Light-Grayish-Blue: hsl(240, 75%, 98%);
+    $c-n-Light-Gray: hsl(0, 0%, 75%);
+    $c-n-white: hsl(0,0,100%);
+    $c-n-black: hsl(0,0,0%);
     // Gradients
 // Screen Variables
-    $screen-min: '';
-    $screen-max: '';
-// Fonts
+    $screen-min: 23.4375rem;
+    $screen-max: 90rem;
+
 
 
 body{ 
-    lalaland
+    min-height: 100vh;
+    min-height: 100svh;
+    background-color: $c-n-white;
 }
 

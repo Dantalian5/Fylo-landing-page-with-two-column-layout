@@ -1,2 +1,15 @@
-
+.row{
+    display: flex;
+}
+.main-container{
+    max-width: $screen-max;
+    min-width: 18.75rem;
+    margin-inline: auto;
+    padding-inline: 5.5%;
+    padding-block: 5.5%;
+}
+.header{
+    min-height: 100vh;
+    min-height: 100svh;
+}
 
