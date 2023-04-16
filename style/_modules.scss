@@ -1,14 +1,6 @@
 //font-basis-module ------------------
-.title{
-    font-family: $ff-raleway;
-    font-weight: 700;
-}
 .links{
     font-family: $ff-raleway;
-    font-weight: 400;
-}
-.paragraph{
-    font-family: $ff-open-sans;
     font-weight: 400;
 }
 .btn{
@@ -19,13 +11,9 @@
     color: $c-n-white;
 
     text-align: center;
-    //padding-block: 1em;
 }
 
-
-
-// navigation bar --------------
-.navbar{
+.navbar{ //-- navigation bar --
     align-items: center;
     justify-content: space-between;
     &__logo{
@@ -37,86 +25,280 @@
         color: $c-p-Very-Dark-Blue;
     }
 }
-// hero section ----------------
-.hero{
-    flex-wrap: wrap-reverse;
-    //align-items: center;
+
+.hero{ //-- hero section --
     padding-block: 12vh;
     padding-block: 12svh; // prefered mesure
     &__img{
         padding-inline: 4.5%;
         align-items: center;
     }
-    &__info{
+    &__title,
+    &__subtitle{
+        color: $c-p-Very-Dark-Blue;
+    }
+    &__title{
+        font-size: fluid-size-vw($screen-min, $screen-max, 1.5rem, 2.5rem);
+        margin-block: 1.8em 0;
+    }
+    &__subtitle{
+        font-size: fluid-size-vw($screen-min, $screen-max, .875rem, 1.25rem);
+        margin-block: 1.5rem;
+        width: 90%;
+        margin-inline: auto;
+    }
+    &__cta{
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: start;
+        justify-content: center;
+        width: 90%;
+        margin-inline: auto;
         &__item{
-            color: $c-p-Very-Dark-Blue;
-            text-align: center;
-            line-height: 150%;
+            font-size: fluid-size-vw($screen-min, $screen-max, .75rem, .875rem);
+            padding-block: 1em;
+            border-radius: .3em;
+            border: 1px solid;
+            box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.1);         
         }
-        &__title{
-            font-size: fluid-size-vw($screen-min, $screen-max, 1.5rem, 2.5rem);
-            margin-block: 1.8em 0;
-            letter-spacing: 0.005em;
+    }
+    &__input--wrapper{
+        flex-grow: 2;
+        flex-basis: 15rem;
+        flex-shrink: 1;
+    }
+    &__input{
+        border-color: $c-p-Desaturated-Blue;
+        padding-left: 1.25rem;
+        width: 100%;
+    }
+    &__btn{
+        border-color: $c-a-Bright-Blue;
+        padding-inline: 5%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    
+}
+
+.section1{ //-- Section 1 (main section) --
+    background-color: $c-n-Light-Grayish-Blue;
+    position: relative;
+    margin-top: 40px;
+    overflow-x: clip;
+    &::before {
+        content: '';
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -40px);
+        width: 200%;
+        background-color: $c-n-Light-Grayish-Blue;
+        height: 30%;
+        z-index: -1;
+    }
+    &__img{
+        padding-inline: 2%;
+        margin-block: 3.125rem;
+    }
+    &__title,
+    &__text{
+        color: $c-p-Very-Dark-Blue;
+    }
+    &__title{
+        font-size: fluid-size-vw($screen-min, $screen-max, 1rem, 2.5rem);
+        margin-bottom: 1.5rem;
+        margin-top: 1.875rem;
+    }
+    &__text{
+        font-size: fluid-size-vw($screen-min, $screen-max, .875rem, 1.25rem);
+        opacity: .75;
+        width: 97%;
+        margin-bottom: 1rem;
+    }
+    &__link{
+        align-items: center;
+        border-bottom: 2px solid $c-a-Moderate-Cyan;
+        width: fit-content;
+        margin-inline: auto;
+        &__text{
+            margin-right: .375rem;
+            color: $c-a-Moderate-Cyan;
+            font-size: fluid-size-vw($screen-min, $screen-max, .75rem, 1rem);
+        }
+        &__icon{
+            width: 1rem;
+        }
+    }
+    &__testimonial{
+        background-color: $c-n-white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: min(6%, 2rem);
+        width: 85%;
+        max-width: 22.5rem;
+        margin-inline: auto;
+        margin-block: 2.5rem;
+        &__quot{
+            width: .8125rem;
+            margin-bottom: .5rem;
         }
         &__text{
-            font-size: fluid-size-vw($screen-min, $screen-max, .875rem, 1.25rem);
-            margin-block: 1.5rem;
-            width: 90%;
-            margin-inline: auto;
+            font-size: fluid-size-vw($screen-min, $screen-max, .625rem, .8125rem);
+            line-height: 180%;
+            letter-spacing: 0.038em;
+            margin-bottom: 1rem;
         }
-        &__cta{
-            flex-wrap: wrap;
-            gap: 1rem;
+        &__contact{
             align-items: center;
-            justify-content: center;
-            width: 90%;
-            margin-inline: auto;
-            &__item{
-                font-size: fluid-size-vw($screen-min, $screen-max, .75rem, .875rem);
-                max-width: 20rem;
-                padding-block: 1em;
-                border-radius: .3em;
-                border: 1px solid;
-                box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.1);
+            &__avatar{
+                width: fluid-size-vw($screen-min, $screen-max, 1.5rem, 2rem);
+                height: fluid-size-vw($screen-min, $screen-max, 1.5rem, 2rem);
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: .5rem;
+            }
+            &__name{
+                font-family: $ff-open-sans;
+                font-weight: 700;
+                font-size: fluid-size-vw($screen-min, $screen-max, .5625rem, .6875rem);
+                letter-spacing: 0.055em;
+                color: $c-n-black;
+                margin-bottom: .125rem;
+            }
+            &__info{
+                font-family: $ff-open-sans;
+                font-weight: 600;
+                font-size: fluid-size-vw($screen-min, $screen-max, .375rem, .5rem);
+                letter-spacing: 0.038em;
+                color: $c-n-black;
             }
         }
-        &__input{
-            border-color: $c-p-Desaturated-Blue;
-            padding-left: 1.25rem;
-            width: 100%;
+    }
+
+}
+
+.section2{ //-- Section 2 ( call to action section) --
+    flex-wrap: wrap;
+    background-color: $c-p-Desaturated-Blue;
+    padding-block: min(15%, 6.25rem);
+    &__title,
+    &__subtitle{
+        color: $c-n-white;
+    }
+    &__title{
+        font-size: fluid-size-vw($screen-min, $screen-max, 1.125rem, 2rem);
+    }
+    &__subtitle{
+        font-size: fluid-size-vw($screen-min, $screen-max, .875rem, 1rem);
+        margin-block: 1.2em;
+        width: 85%;
+        margin-inline: auto;
+    }
+    &__input{
+        padding-left: 1.25rem;
+        display: block;
+        border: 0;
+        border: 1px solid $c-n-white;
+    }
+    &__item{
+        font-size: fluid-size-vw($screen-min, $screen-max, .625rem, .875rem);
+        width: 80%;
+        margin-inline: auto;
+        padding-block: 1em;
+        border-radius: .3em;
+        margin-block: 1em 0;
+        box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.1);
+    }   
+}
+.footer{ //-- Footer section --
+    background-color: $c-p-Very-Dark-Blue;
+    padding-inline: max(2.25rem, 5.5%);
+    padding-block: min(6.25rem, 15%);
+    &__logo{
+        width: 10.9375rem;
+        filter:brightness(0) saturate(100%) invert(1); 
+        margin-bottom: 2.5rem;
+    }
+    &__info{
+        flex-wrap: wrap;
+    }
+    &__col{
+        flex-basis: 22rem;
+    }
+    &__contact{
+        margin-bottom: 2.5rem;
+        &__item{
+            align-items: center;
+            gap: 1.125rem;
+            margin-bottom: 1.125rem;
         }
-        &__btn{
-            border-color: $c-a-Bright-Blue;
-            padding-inline: 5%;
-            flex-grow: 1;
+        &__icon{
+            width: 1.125rem;
+        }
+    }
+    &__text{
+        font-size: 1rem;
+        color: $c-n-white;
+    }
+    &__links{
+        &--col{
+            flex-basis: 10rem;
+            margin-bottom: 2rem;
+        }
+        &__item{
+            margin-bottom: 1rem;
+        }
+    }
+    &__social{
+        gap: .75rem;
+        justify-content: center;
+        &__item{
+            display: block;
+            width: 1.75rem;
+            height: fit-content;
+            color: $c-n-white;
         }
     }
 }
 
-@media screen and (min-width: 50rem) {
+
+
+
+@media screen and (min-width: 49.1875rem) {
     .hero{
-        flex-wrap: nowrap;
         &__img{
-            width: 100%;
             padding-inline: 0;
         }
-        &__info{
-            width: 100%;
-            &__item{
-                text-align: start;
-            }
-            &__title{
-                //margin-block-start: 0;
-            }
-            &__text{
-                margin-inline: 0;
-                letter-spacing: -0.043em;
-            }
-            &__cta{
-                width: 85%;
-                margin-inline: 0;
-                justify-content: flex-start;
-            }
+        &__subtitle{
+            margin-inline: 0;
+            letter-spacing: -0.043em;
+        }
+        &__cta{
+            width: 85%;
+            margin-inline: 0;
+            justify-content: flex-start;
+        }
+    
+    }
+    .section1{
+        &__link{
+            margin-left: 0;
+        }
+        &__testimonial{
+            margin-inline: 0;
+        }
+    }
+    .section2{
+        &__subtitle{
+            margin-left: 0;
+        }
+        &__btn{
+            width: 35%;
+            min-width: 200px;
+            margin-left: 10%;
         }
     }
     

@@ -1,15 +1,60 @@
-.row{
+.flex{ //- Flex display -
     display: flex;
 }
-.main-container{
+.row{ //- Flex two columns fluid layout -
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    &__col{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 21.875rem;
+        &--2-1{
+            flex-grow: 2;
+        }
+    }
+}
+.section{ //- Main section layout -
     max-width: $screen-max;
     min-width: 18.75rem;
     margin-inline: auto;
     padding-inline: 5.5%;
     padding-block: 5.5%;
+    z-index: 1;
+    &__title{
+        font-family: $ff-raleway;
+        font-weight: 700;
+        letter-spacing: 0.005em;
+    }
+    &__subtitle,
+    &__text{
+        font-family: $ff-open-sans;
+        font-weight: 400;
+    }
+    &__title, 
+    &__subtitle{
+        text-align: center;
+    }
+    &__title, 
+    &__subtitle,
+    &__text{
+        line-height: 150%;
+    }
 }
-.header{
+
+.header{ //- header layout -
     min-height: 100vh;
     min-height: 100svh;
 }
+
+@media screen and (min-width: 49.1875rem) {
+    .section{
+        &__title, 
+        &__subtitle{
+            text-align: start;        
+        }
+    }
+        
+    
+}
+
 
