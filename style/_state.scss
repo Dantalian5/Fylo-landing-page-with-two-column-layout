@@ -1,0 +1,42 @@
+@media (hover: hover) {
+    .btn:hover{
+        background-color: hsl(221, 100, 71);
+    }
+    .hero__btn{
+        border-color: hsl(221, 100, 71);
+    }
+    .section1__link:hover{
+        filter: opacity(70%) brightness(1.2);
+    }
+    .footer{
+        &__link:hover,
+        &__social__item:hover{
+            color: $c-a-Bright-Blue;
+        }
+    }
+}
+.hero__input:invalid,
+.section2__input:invalid{
+    border-color: red;
+    & + span{
+        display: block;
+        margin-top: 6px;
+        &::after{
+            content: 'Please check your email';
+            font-family: $ff-open-sans;
+            font-weight: 400;
+            font-size: .75rem;
+            color: red;
+        }
+    }
+
+}
+.section2__input:invalid{
+    & + span{
+        margin-left: 10%;
+        &::after{
+            color: $c-n-white;
+        }
+    }
+
+}
