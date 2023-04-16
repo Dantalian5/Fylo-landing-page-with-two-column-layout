@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github repo](https://github.com/Dantalian5/Fylo-landing-page-with-two-column-layout.git)
+- Live Site URL: [Live Site](https://dantalian5.github.io/Fylo-landing-page-with-two-column-layout/)
 
 ### Built with
 
